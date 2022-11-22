@@ -17,4 +17,13 @@
   max-width: 1024px;
   margin: 0 auto;
   padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+@media (min-width: 480px) {
+  .container {
+    gap: 2rem;
+  }
 }
