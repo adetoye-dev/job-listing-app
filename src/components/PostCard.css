@@ -7,6 +7,10 @@
   gap: 2rem;
 }
 
+.featured-post {
+  border-left: 0.4rem solid var(--Dark-Cyan);
+}
+
 .post-img {
   position: absolute;
   width: 6rem;
@@ -31,8 +35,16 @@
   align-items: center;
 }
 
-.post-title {
+.company {
   margin-inline-end: 1rem;
+  color: var(--Dark-Cyan);
+}
+
+.position {
+  cursor: pointer;
+}
+
+.position:hover {
   color: var(--Dark-Cyan);
 }
 
