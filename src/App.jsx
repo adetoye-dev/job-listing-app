@@ -1,4 +1,5 @@
 import "./App.css";
+import PostCard from "./components/PostCard";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       </header>
       <main className="main">
         <div className="container">
-          <h1>Hello World</h1>
+          <PostCard />
         </div>
       </main>
     </div>
