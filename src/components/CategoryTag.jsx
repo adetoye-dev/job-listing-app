@@ -1,7 +1,11 @@
 import "./CategoryTag.css";
 
-const CategoryTag = ({ tagName }) => {
-  return <span className="category-tag">{tagName}</span>;
+const CategoryTag = ({ tagName, handleClick }) => {
+  return (
+    <span className="category-tag" onClick={handleClick}>
+      {tagName}
+    </span>
+  );
 };
 
 export default CategoryTag;
