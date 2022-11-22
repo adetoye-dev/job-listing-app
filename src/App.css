@@ -5,3 +5,16 @@
 .bg-top img {
   width: 100%;
 }
+
+.main {
+  background-color: var(--Background);
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-block: 5rem;
+}

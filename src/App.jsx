@@ -12,6 +12,11 @@ function App() {
           <img src="/images/bg-header-desktop.svg" alt="bg-header" />
         </picture>
       </header>
+      <main className="main">
+        <div className="container">
+          <h1>Hello World</h1>
+        </div>
+      </main>
     </div>
   );
 }
