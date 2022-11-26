@@ -17,11 +17,29 @@ function App() {
     });
   };
 
+  const clearFilterTags = () => {
+    setFilters([]);
+  };
+
+  const filterItems = (arr) => {
+    return filters.every((el) => arr.includes(el));
+  };
+
+  const filteredPosts = jobPostings.filter((post) => {
+    return filterItems([
+      post.role,
+      post.level,
+      ...post.languages,
+      ...post.tools,
+    ]);
+  });
+
+  console.log(filteredPosts);
   // useEffect(() => {
   //   console.log(filters);
   // }, [filters]);
 
-  const renderJobs = jobPostings.map((post) => (
+  const renderJobs = filteredPosts.map((post) => (
     <PostCard key={post.id} postData={post} handleTagClick={handleTagClick} />
   ));
   return (
@@ -37,7 +55,11 @@ function App() {
       </header>
       <main className="main">
         <div className="container">
-          {filters.length > 0 ? <FilterBox filters={filters} /> : ""}
+          {filters.length > 0 ? (
+            <FilterBox filters={filters} clearFilterTags={clearFilterTags} />
+          ) : (
+            ""
+          )}
           {renderJobs}
         </div>
       </main>
