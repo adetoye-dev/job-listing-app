@@ -11,7 +11,7 @@ const FilterTag = ({ tagName }) => {
   );
 };
 
-const FilterBox = ({ filters }) => {
+const FilterBox = ({ filters, clearFilterTags }) => {
   return (
     <div className="filter-box">
       <div className="filters">
@@ -19,7 +19,9 @@ const FilterBox = ({ filters }) => {
           <FilterTag key={filter} tagName={filter} />
         ))}
       </div>
-      <span className="clear-filters-btn">Clear</span>
+      <span className="clear-filters-btn" onClick={clearFilterTags}>
+        Clear
+      </span>
     </div>
   );
 };
