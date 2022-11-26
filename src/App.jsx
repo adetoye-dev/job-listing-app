@@ -1,11 +1,10 @@
 import "./App.css";
 import PostCard from "./components/PostCard";
 import data from "../data.json";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import FilterBox from "./components/FilterBox";
 
 function App() {
-  const [jobPostings, setJobPostings] = useState(data);
   const [filters, setFilters] = useState([]);
 
   const handleTagClick = (tag) => {
@@ -29,7 +28,7 @@ function App() {
     return filters.every((el) => arr.includes(el));
   };
 
-  const filteredPosts = jobPostings.filter((post) => {
+  const filteredPosts = data.filter((post) => {
     return filterItems([
       post.role,
       post.level,
