@@ -1,5 +1,5 @@
 .filter-box {
-  position: absolute;
+  position: relative;
   padding: 2rem;
   background-color: var(--White);
   width: 100%;

@@ -17,6 +17,9 @@
   width: 90%;
   max-width: 1024px;
   margin: 0 auto;
+}
+
+.job-posts {
   padding-block: 5rem;
   display: flex;
   flex-direction: column;
@@ -24,7 +27,8 @@
 }
 
 @media (min-width: 480px) {
-  .container {
+  .job-posts {
     gap: 2rem;
+    padding-block: 3rem 5rem;
   }
 }

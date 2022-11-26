@@ -23,4 +23,5 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
+  background-color: var(--Background);
 }

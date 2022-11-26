@@ -62,7 +62,7 @@ function App() {
           ) : (
             ""
           )}
-          {renderJobs}
+          <div className="job-posts">{renderJobs}</div>
         </div>
       </main>
     </div>
