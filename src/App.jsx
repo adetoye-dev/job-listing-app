@@ -21,6 +21,10 @@ function App() {
     setFilters([]);
   };
 
+  const deleteTag = (tag) => {
+    setFilters((prevFilters) => prevFilters.filter((item) => item !== tag));
+  };
+
   const filterItems = (arr) => {
     return filters.every((el) => arr.includes(el));
   };
@@ -33,11 +37,6 @@ function App() {
       ...post.tools,
     ]);
   });
-
-  console.log(filteredPosts);
-  // useEffect(() => {
-  //   console.log(filters);
-  // }, [filters]);
 
   const renderJobs = filteredPosts.map((post) => (
     <PostCard key={post.id} postData={post} handleTagClick={handleTagClick} />
@@ -56,7 +55,11 @@ function App() {
       <main className="main">
         <div className="container">
           {filters.length > 0 ? (
-            <FilterBox filters={filters} clearFilterTags={clearFilterTags} />
+            <FilterBox
+              filters={filters}
+              clearFilterTags={clearFilterTags}
+              deleteTag={deleteTag}
+            />
           ) : (
             ""
           )}
